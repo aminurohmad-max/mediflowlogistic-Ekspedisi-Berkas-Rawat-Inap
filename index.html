@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Ekspedisi RS - Clean View</title>
+    <style>
+        /* Menghilangkan margin default browser */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%;
+            overflow: hidden; /* Mencegah scrollbar ganda */
+            background-color: #0f172a; /* Warna latar belakang gelap agar transisi halus */
+        }
+
+        /* Container utama untuk membungkus Web App Google */
+        .app-container {
+            position: absolute;
+            /* Menarik konten ke atas sejauh 45px untuk menyembunyikan banner Google */
+            top: -20px; 
+            left: 0;
+            width: 100%;
+            /* Menambah tinggi container agar bagian bawah aplikasi tidak terpotong */
+            height: calc(100% + 45px);
+        }
+
+        /* Pengaturan Frame Aplikasi */
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+            box-shadow: none;
+        }
+
+        /* Loading indicator sederhana sebelum iframe muncul */
+        .loading-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: sans-serif;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loading-overlay">Memuat Sistem Ekspedisi...</div>
+
+    <div class="app-container">
+        <!-- URL Web App Anda sudah terpasang di bawah ini -->
+        <iframe src="https://script.google.com/macros/s/AKfycbyP0kZhfuzxqaa2XB9ZxUteQ4IhafJml-ZIz3fI7x6_QrVLlPcreHThu37a84rq652q/exec"></iframe>
+    </div>
+
+</body>
+</html>
